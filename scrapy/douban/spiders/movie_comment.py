@@ -21,7 +21,7 @@ class MovieCommentSpider(Spider):
     cursor.execute(sql)
     movies = cursor.fetchall()
     start_urls = {
-        str(i['douban_id']): ('https://m.douban.com/rexxar/api/v2/movie/%s/interests?count=5&order_by=hot' % i['douban_id']) for i in movies
+        str('26849758'): ('https://m.douban.com/rexxar/api/v2/movie/%s/interests?count=5&order_by=hot' % '26849758') for i in movies
     }
 
     def start_requests(self):
